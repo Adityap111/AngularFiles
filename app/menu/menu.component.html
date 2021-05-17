@@ -1,0 +1,25 @@
+<p>menu works!</p>
+<!-- <a [routerLink]="['first']">First</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a [routerLink]="['calc']">Calc</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['data-bind']">data bind</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['employ-show']">employ show</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+
+
+<a [routerLink]="['/menu',{outlets: {'data': ['first']}}]"> First</a> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['/menu',{outlets: {'data': ['second']}}]"> Second</a> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!-- <a [routerLink]="['/menu',{outlets: {'data': ['third']}}]"> Third</a> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --> -->
+
+<a [routerLink]="['/menu',{outlets: {'data': ['eventdemo']}}]"> Event</a> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['/menu',{outlets: {'data': ['employ-show']}}]"> show employ</a> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['/menu',{outlets: {'data': ['employ-dropdown']}}]"> show dropdown</a> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<hr/>
+<router-outlet name="data"></router-outlet>

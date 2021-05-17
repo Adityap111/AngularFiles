@@ -1,0 +1,17 @@
+<p>student-show works!</p>
+<table border="3">
+    <tr>
+      <th>Student No</th>
+      <th>first Name</th>
+      <th>last name</th>
+      <th>city</th>
+      <th>cgpa</th>
+    </tr>
+    <tr *ngFor="let s of students">
+        <td> {{s.sno}}</td>
+        <td> {{s.firstName}}</td>
+        <td> {{s.lastName}}</td>
+        <td> {{s.city}}</td>
+        <td> {{s.cgpa}}</td>
+    </tr>
+  </table>
