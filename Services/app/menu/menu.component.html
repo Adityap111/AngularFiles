@@ -1,0 +1,21 @@
+<p>menu works!</p>
+<!-- <a [routerLink]="['first']">First</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a [routerLink]="['calc']">Calc</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['data-bind']">data bind</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['employ-show']">employ show</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+
+<a [routerLink]="['/menu',{outlets: {'data': ['employ']}}]"> show employ</a> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['/menu',{outlets: {'data': ['employ-search']}}]"> Search employ</a> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a [routerLink]="['/menu',{outlets: {'data': ['user']}}]"> show user</a> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['/menu',{outlets: {'data': ['user-search']}}]"> search user</a> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<hr/>
+<router-outlet name="data"></router-outlet>
+
