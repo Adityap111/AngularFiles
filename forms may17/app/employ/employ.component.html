@@ -1,0 +1,43 @@
+<p>employ works!</p>
+
+<form #employForm="ngForm" (ngSubmit)="insert(employForm)" action="">
+<br>
+    Employ No:
+    <input type="number" name="empno"
+        [(ngModel)]="employ.empno" required #empno="ngModel"/>
+
+        <div *ngIf="empno.invalid && employForm.submitted && !isValid"> 
+            <h6 style="color: red">Please Enter Employ No...</h6>
+           </div>
+           <br><br>
+           Employ Name : 
+       <input type="text" name="name" 
+       [(ngModel)]="employ.name" required #name="ngModel" /> <br/><br/>
+       <div *ngIf="name.invalid && employForm.submitted && !isValid"> 
+         <h6 style="color: red">Please Enter Employ Name...</h6>
+       </div>
+       <br>
+       Employ Department : 
+       <input type="text" name="dept" 
+       [(ngModel)]="employ.dept" required #dept="ngModel" /> <br/><br/>
+       <div *ngIf="dept.invalid && employForm.submitted && !isValid"> 
+         <h6 style="color: red">Please Enter Employ Department...</h6>
+       </div>
+       <br>
+       Employ Designation : 
+       <input type="text" name="desig" 
+       [(ngModel)]="employ.desig" required #desig="ngModel" /> <br/><br/>
+       <div *ngIf="desig.invalid && employForm.submitted && !isValid"> 
+         <h6 style="color: red">Please Enter Employ Designation...</h6>
+       </div>
+       <br>
+       Employ Salary :
+       <input type="number" name="basic" 
+               [(ngModel)]="employ.basic" required #basic="ngModel" /> <br/><br/>
+       <div *ngIf="basic.invalid && employForm.submitted && !isValid"> 
+           <h6 style="color: red">Please Enter Employ Basic...</h6>
+          </div>
+          <br>
+           <input type="submit" value="Insert" />
+</form>
+{{msg}}
